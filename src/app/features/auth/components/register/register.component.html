@@ -1,0 +1,31 @@
+<body>
+    <div class="center-box">
+        <fieldset>
+            <legend>Inscription</legend>
+            <div style="color: red; font-family: 'Times New Roman', Times, serif;">@if (errorMessage) {
+                {{errorMessage}}
+                }
+            </div>
+            <form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
+                <div class="form-group">
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="username" formControlName="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="text" id="email" name="email" formControlName="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" formControlName="password" required>
+                </div>
+                <button type="submit" [disabled]="isLoading">S'inscrire</button>
+            </form>
+
+            <!-- Spinner centré -->
+            <div class="spinner-overlay" *ngIf="isLoading">
+                <mat-spinner></mat-spinner>
+            </div>
+        </fieldset>
+    </div>
+</body>

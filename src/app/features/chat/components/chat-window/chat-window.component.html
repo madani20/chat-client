@@ -1,0 +1,38 @@
+<fieldset class="body">
+    <!-- <legend>Chat-window</legend> -->
+     <div class="chat-window">
+        <mad-chat-header />
+        <div>
+            @if (errorMessage()) {
+                <div class="error">
+                  {{ errorMessage() }}
+                  <button (click)="retryLoad()">Réessayer</button>
+                </div>
+              }
+        </div>
+        
+        <div class="chat-body">
+            <div class="chat-sidebar">
+                <!-- Liste des conversations  -->
+                <mad-chat-conversations-list />
+
+                <!-- Liste des utilisateur en cours de conversation  -->
+                <mad-chat-users-list />
+                
+                <!-- composant déconnection  -->
+                <mad-chat-logout/>
+            </div>
+
+            <div class="chat-main">
+                <!-- Liste des messages de la conversation en cours -->
+                <mad-chat-messages-list />
+
+                <!-- Indicateur de status d'écriture ou de message lu/envoyé -->
+                <mad-chat-status-indicator />
+
+                <!-- Saisi du message -->
+                <mad-chat-input (messageToSend)="readyToSendMessage($event)" (typing)="onTyping()" />
+            </div>
+        </div>
+    </div>
+</fieldset>

@@ -1,0 +1,26 @@
+<fieldset>
+  <!-- <legend><small>Utilisateurs</small></legend> -->
+  <small>{{ allUserOnline().length }} personne(s) connectée(s)</small>
+  <ul>
+    @for (onlineUser of allUserOnline(); track onlineUser._id) {
+    <li type="none">
+      <span class="username">{{ onlineUser.username }}&nbsp;&nbsp; </span>
+      <span class="status"> ({{ onlineUser.status}}) </span><br>
+    </li>
+    } @empty {
+    <li type="none"><small>Personne d'autre en ligne en ce moment</small></li>
+    }
+  </ul>
+  <small>Participants à la conversation:</small>
+  <ul>
+    @for (participantInConversation of participantsInCurrentConversation(); track participantInConversation._id) {
+    <li type="circle">
+      <span class="username">{{ participantInConversation.username }}&nbsp;&nbsp; <small> {{ participantInConversation.status}} </small></span>
+      <!-- <span class="status"></span><br> -->
+    </li>
+    }
+    @empty {
+      <li><small>Aucun participant dans cette conversation</small></li>
+    }
+  </ul>
+</fieldset>

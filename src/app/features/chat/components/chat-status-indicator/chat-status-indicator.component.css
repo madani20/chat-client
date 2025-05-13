@@ -1,0 +1,23 @@
+.typing-indicator {
+    font-style: italic;
+    /*color: green;*/
+    padding: 4px;
+    font-size: 0.9em;
+  }
+
+  .online {
+    color: green;
+  }
+  
+  .offline {
+    color: gray;
+  }
+  
+  .away {
+    color: orange;
+  }
+  
+  .typing {
+    color: blue;
+    font-style: italic;
+  }

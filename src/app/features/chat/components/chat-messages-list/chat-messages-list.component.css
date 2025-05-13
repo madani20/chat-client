@@ -1,0 +1,12 @@
+.username {
+    font-size: smaller;
+    font-weight: bold;
+}
+.content {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium
+}
+.timestamp {
+    font-size: smaller;
+    color: gray;
+}

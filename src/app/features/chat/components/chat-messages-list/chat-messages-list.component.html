@@ -1,0 +1,20 @@
+<fieldset>
+  <!-- <legend>Chat-messages-list</legend> -->
+  <ul style="list-style-type: none;">
+    @if (currentUser() && stateService.users().length > 0) {
+      @for (msg of msgs(); track msg._id) {
+        <li>
+          <div>
+            <span class="username">{{ getUserName()(msg.userId)}}</span>
+            <span class="timestamp"> {{ msg.timestamp | date: 'dd/MM/yyyy HH:mm' }}</span><br>
+            <span class="content">{{ msg.content }}</span><br><br>
+          </div>
+        </li>
+      } @empty {
+        <li>Aucun message pour cette conversation</li>
+      }
+    } @else {
+      <li>Chargement des utilisateurs...</li>
+    }
+  </ul>
+</fieldset>

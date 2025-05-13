@@ -1,0 +1,15 @@
+<fieldset>
+    <legend><small>Conversations</small></legend>
+    <div class="content-list">
+        <ol type="none">
+            @for (conversation of conversations(); track $index) {
+            <li>
+                <small>
+                    <span>&nbsp;&nbsp;[{{ conversation.name }}]</span>
+                </small>
+            </li>
+            }
+        </ol>
+    </div>
+
+</fieldset>

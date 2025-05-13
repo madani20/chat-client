@@ -1,0 +1,12 @@
+<fieldset>
+  <legend>Status indicator</legend>
+  @if ( isTyping() ) {
+  <div class="typing-indicator">
+    {{userTyping() }} est en train d'écrire...
+  </div>
+  }@else {
+  <div class="typing-indicator">
+    ...
+  </div>
+  }
+</fieldset>

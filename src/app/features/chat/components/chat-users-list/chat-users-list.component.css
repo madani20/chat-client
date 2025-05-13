@@ -1,0 +1,21 @@
+.user-status {
+  font-size: 0.6em;
+  padding: 2px 2px;
+  font-family: 'Times New Roman', Times, serif;
+   }
+.user-id{
+  font-size:x-small;
+}
+.username{
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+}
+
+.online { color: green; }
+.offline { color: gray; }
+.away { color: orange; }
+.typing { color: blue; font-style: italic; }
+
+.status.online { color: green; }
+.status.offline { color: gray; }

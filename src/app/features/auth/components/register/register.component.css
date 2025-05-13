@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .center-box {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 80vh; /* Remplit toute la hauteur de la fenêtre */
+  }
+  
+  fieldset {
+    border: 2px solid #007BFF; /* Couleur de la bordure */
+    padding: 20px;
+    border-radius: 5px; /* Coins arrondis */
+    width: 300px; /* Largeur du fieldset */
+  }
+  
+  legend {
+    padding: 0 10px; /* Espace autour du texte de légende */
+    font-weight: bold; /* Met le texte en gras */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Espace entre les champs */
+  }
+  
+  label {
+    display: block; /* Affiche le label comme un bloc */
+    margin-bottom: 5px; /* Espace en dessous du label */
+  }
+  
+  input {
+    width: 95%; /* Champ de texte prend toute la largeur */
+    padding: 10px; /* Rembourrage interne */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 4px; /* Coins arrondis */
+  }
+  
+  button {
+    width: 100%; /* Bouton prend toute la largeur */
+    padding: 10px; /* Rembourrage interne */
+    background-color: #0056b3; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main au survol */
+  }
+  
+  button:hover {
+    background-color: #007BFF; /* Couleur de fond */
+  }
+  .spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }

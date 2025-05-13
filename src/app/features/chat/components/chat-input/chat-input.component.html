@@ -1,0 +1,8 @@
+<div class="message-input">
+  <form [formGroup]="messageForm" (ngSubmit)="toSendMessage()">
+    <input name="content" formControlName="content" (input)="onTyping()" (keyup.enter)="toSendMessage()" 
+             placeholder="Écrit un message..." />
+    <button type="submit" (click)="toSendMessage()" [disabled]="messageForm.invalid" class="emoji">Envoyer
+      &nbsp;&nbsp;😊</button>
+  </form>
+</div>
