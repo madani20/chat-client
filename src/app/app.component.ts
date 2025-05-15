@@ -11,6 +11,10 @@ import { LocalStorageService } from './features/chat/services/local-storage.serv
 })
 export class AppComponent  {
  
-    title = 'Chat with';
+    title = 'Chat with'
+
+    ngOnInit() {
+    console.log('AppComponent initialized');
+  }
  
 }
