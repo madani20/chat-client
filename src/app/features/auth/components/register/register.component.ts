@@ -63,6 +63,7 @@ export class RegisterComponent implements OnDestroy {
               horizontalPosition: 'center',
               verticalPosition: 'top'
             })
+            console.log('Inscription réussie de ', user.username)
             window.location.reload()
             this.router.navigate(['/connect'])
                   
@@ -76,6 +77,8 @@ export class RegisterComponent implements OnDestroy {
             })
             console.error('Erreur lors de la connexion', err)
             this.errorMessage = 'Nom d\'utilisateur ou mot de passe incorrect!'
+             window.location.reload()
+            this.router.navigate(['/connect'])
           }
         })
       } else {
