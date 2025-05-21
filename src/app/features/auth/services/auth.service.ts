@@ -68,6 +68,8 @@ export class AuthService {
     const profil = { userName: username, password: password, email: email
     }
     return this.http.post<UserResponse>(API_ENDPOINTS_AUTH.register, profil).pipe(
+      tap(response => console.log('Raw response:', response)),
+      retry(2),
       map(response => ({
         _id: response.userId,
         username: response.username,
